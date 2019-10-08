@@ -1,0 +1,454 @@
+{
+	"description": "This component visualizes the elements hierarchically.\nAlmost anything can be represented in a tree structure.\nSee the `./data/sampleData.js` for sample data.",
+	"displayName": "TreeView",
+	"methods": [
+		{
+			"name": "getSnapshot",
+			"docblock": null,
+			"modifiers": [],
+			"params": [],
+			"returns": null
+		},
+		{
+			"name": "setSnapshot",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "snapshot",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "manageNodes",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "data",
+					"type": null
+				},
+				{
+					"name": "expandAll",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "handleChange",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "nodes",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "getValue",
+			"docblock": null,
+			"modifiers": [],
+			"params": [],
+			"returns": null
+		},
+		{
+			"name": "getCheckedNodes",
+			"docblock": null,
+			"modifiers": [],
+			"params": [],
+			"returns": null
+		},
+		{
+			"name": "onSelectedTreeNode",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "node",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "generateTreeNode",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "node",
+					"type": null
+				},
+				{
+					"name": "rest",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "wrap",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "match",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "highlightSearchTerm",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "node",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "getStyle",
+			"docblock": null,
+			"modifiers": [],
+			"params": [],
+			"returns": null
+		},
+		{
+			"name": "getFooterText",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "nodes",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "calculateHeight",
+			"docblock": null,
+			"modifiers": [],
+			"params": [],
+			"returns": null
+		}
+	],
+	"props": {
+		"data": {
+			"type": {
+				"name": "union",
+				"value": [
+					{
+						"name": "array"
+					},
+					{
+						"name": "object"
+					}
+				]
+			},
+			"required": false,
+			"description": "Data source of the treeview element.",
+			"defaultValue": {
+				"value": [],
+				"computed": false
+			}
+		},
+		"expandAll": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "If `true`, all nodes of the treeview are expanded.",
+			"defaultValue": {
+				"value": false,
+				"computed": false
+			}
+		},
+		"footerStyle": {
+			"type": {
+				"name": "object"
+			},
+			"required": false,
+			"description": "Overrides style of the footer element."
+		},
+		"height": {
+			"type": {
+				"name": "union",
+				"value": [
+					{
+						"name": "string"
+					},
+					{
+						"name": "number"
+					}
+				]
+			},
+			"required": false,
+			"description": "Height of the tree element.",
+			"defaultValue": {
+				"value": 500,
+				"computed": false
+			}
+		},
+		"hintText": {
+			"type": {
+				"name": "string"
+			},
+			"required": false,
+			"description": "Hint text of the search element."
+		},
+		"isCheckable": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "If `true`, all treeview nodes become checkable.",
+			"defaultValue": {
+				"value": true,
+				"computed": false
+			}
+		},
+		"isLeafCheckable": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "If `true`, only leaf nodes of the treeview become checkable.",
+			"defaultValue": {
+				"value": false,
+				"computed": false
+			}
+		},
+		"isMultiSelect": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "If `true`, checkboxes appear in nodes and multi selection is actived.\nIf `false`, radio buttons appear in nodes and single selection is actived.",
+			"defaultValue": {
+				"value": true,
+				"computed": false
+			}
+		},
+		"onCheckNode": {
+			"type": {
+				"name": "func"
+			},
+			"required": false,
+			"description": "Callback function when a node is checked."
+		},
+		"rowHeight": {
+			"type": {
+				"name": "union",
+				"value": [
+					{
+						"name": "number"
+					}
+				]
+			},
+			"required": false,
+			"description": "Row height of the treeview nodes.",
+			"defaultValue": {
+				"value": 36,
+				"computed": false
+			}
+		},
+		"showFolderIcon": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "If `false`, the parent node hasn't icon.",
+			"defaultValue": {
+				"value": true,
+				"computed": false
+			}
+		},
+		"showFooter": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "If `true`, footer of the treeview is visible.",
+			"defaultValue": {
+				"value": true,
+				"computed": false
+			}
+		},
+		"showIcons": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "If `true`, icons of all nodes are visible.",
+			"defaultValue": {
+				"value": true,
+				"computed": false
+			}
+		},
+		"showSearch": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "If `true`, search input element is visible.",
+			"defaultValue": {
+				"value": true,
+				"computed": false
+			}
+		},
+		"width": {
+			"type": {
+				"name": "union",
+				"value": [
+					{
+						"name": "string"
+					},
+					{
+						"name": "number"
+					}
+				]
+			},
+			"required": false,
+			"description": "Width of the treeview.",
+			"defaultValue": {
+				"value": "100%",
+				"computed": false
+			}
+		},
+		"canCheckChildsByParent": {
+			"defaultValue": {
+				"value": true,
+				"computed": false
+			},
+			"required": false
+		}
+	},
+	"composes": [
+		"@kuveytturk/boa-base"
+	],
+	"composeProps": {
+		"packages/base/src/ComponentBase/index.js": {
+			"componentSize": {
+				"type": {
+					"name": "enum",
+					"value": [
+						{
+							"value": "ComponentSize.LARGE",
+							"computed": true
+						},
+						{
+							"value": "ComponentSize.MEDIUM",
+							"computed": true
+						},
+						{
+							"value": "ComponentSize.SMALL",
+							"computed": true
+						},
+						{
+							"value": "ComponentSize.XSMALL",
+							"computed": true
+						}
+					]
+				},
+				"required": false,
+				"description": "Defines size of the component. The ComponentSize constant is exported from enums.\n@ignore",
+				"defaultValue": {
+					"value": "ComponentSize.LARGE",
+					"computed": true
+				}
+			},
+			"context": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "Defines application requirements such as localization, theme, platform."
+			},
+			"disabled": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "If true, all component functionalities are disabled.",
+				"defaultValue": {
+					"value": false,
+					"computed": false
+				}
+			},
+			"id": {
+				"type": {
+					"name": "string"
+				},
+				"required": false,
+				"description": "All components must have an id prop."
+			},
+			"isVisible": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "@deprecated\n@ignore\nIn the ComponentComposer, we change the visibility of the component with this prop."
+			},
+			"newLine": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "As described in componentSize prop, if one of the components takes part in the new line\non a card we are using this prop.\n@ignore",
+				"defaultValue": {
+					"value": false,
+					"computed": false
+				}
+			},
+			"snapKey": {
+				"type": {
+					"name": "string"
+				},
+				"required": false,
+				"description": "The snapKey property is used to manage snapshots of the child components.\n@ignore"
+			},
+			"snapshot": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "In our SPA, we want to keep the state of each component when a page unmounts.\nAnd when the same page mounts again, the component mounts with the snapshot prop and\nit gets the previous state.\n@ignore"
+			},
+			"style": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "All components must have a style prop."
+			},
+			"valueConstraint": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "The valueConstraint is used for validations on components like limit, required, etc."
+			},
+			"visible": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "In the ComponentComposer, we change the visibility of the component with this prop.",
+				"defaultValue": {
+					"value": true,
+					"computed": false
+				}
+			}
+		}
+	}
+}

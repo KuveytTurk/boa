@@ -1,0 +1,40 @@
+{
+  "name": "@kuveytturk/boa-utils",
+  "private": true,
+  "author": "Kuveyt Turk BOA One Team",
+  "version": "0.1.4",
+  "description": "BOA Components Utility Package",
+  "keywords": [
+    "messaging",
+    "localization",
+    "utility"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kuveytturk/boa.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kuveytturk/boa/issues"
+  },
+  "scripts": {
+    "prebuild": "rimraf build",
+    "build:es2015": "cross-env NODE_ENV=production babel --config-file ../../babel.config.js src --out-dir ./build --ignore \"src/**/*.test.js\" ",
+    "build:copy-files": "babel-node --config-file ../../babel.config.js ./scripts/copy-files.js",
+    "build": "yarn build:es2015 && yarn build:copy-files"
+  },
+  "dependencies": {
+    "iban": "^0.0.10",
+    "jquery": "^3.4.0",
+    "moment": "^2.24.0",
+    "numeral": "^2.0.4",
+    "phone-formatter": "^0.0.2"
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  }
+}

@@ -1,0 +1,150 @@
+[
+  {
+    "alias": "Button",
+    "input": "packages/components/src/Button/Button.js",
+    "output": "stories/Button/doc.json",
+    "composes": [
+      "packages/base/src/ComponentBase/index.js"
+    ]
+  },
+  {
+    "alias": "CheckBox",
+    "input": "packages/components/src/CheckBox/CheckBox.js",
+    "output": "stories/CheckBox/doc.json",
+    "composes": [
+      "packages/base/src/ComponentBase/index.js"
+    ]
+  },
+  {
+    "alias": "DateTimePicker",
+    "input": "packages/components/src/DateTimePicker/DateTimePicker.js",
+    "output": "stories/DateTimePicker/doc.json",
+    "composes": [
+      "packages/base/src/ComponentBase/index.js"
+    ]
+  },
+  {
+    "alias": "DocCode",
+    "input": "packages/components/src/DocCode/DocCode.js",
+    "output": "stories/Documentation/DocCode/doc.json",
+    "composes": [
+      "packages/base/src/ComponentBase/index.js"
+    ]
+  },
+  {
+    "alias": "DocNotice",
+    "input": "packages/components/src/DocNotice/DocNotice.js",
+    "output": "stories/Documentation/DocNotice/doc.json",
+    "composes": [
+      "packages/base/src/ComponentBase/index.js"
+    ]
+  },
+  {
+    "alias": "DocToc",
+    "input": "packages/components/src/DocToc/DocToc.js",
+    "output": "stories/Documentation/DocToc/doc.json",
+    "composes": [
+      "packages/base/src/ComponentBase/index.js"
+    ]
+  },
+  {
+    "alias": "DocViewer",
+    "input": "packages/components/src/DocViewer/DocViewer.js",
+    "output": "stories/Documentation/DocViewer/doc.json",
+    "composes": [
+      "packages/base/src/ComponentBase/index.js"
+    ]
+  },
+  {
+    "alias": "Input",
+    "input": "packages/components/src/Input/Input.js",
+    "output": "stories/Inputs/Input/doc.json",
+    "composes": [
+      "packages/base/src/EditorBase/index.js",
+      "packages/base/src/ComponentBase/index.js"
+    ]
+  },
+  {
+    "alias": "InputAction",
+    "input": "packages/components/src/InputAction/InputAction.js",
+    "output": "stories/Inputs/InputAction/doc.json",
+    "composes": [
+      "packages/components/src/Input/Input.js",
+      "packages/base/src/EditorBase/index.js",
+      "packages/base/src/ComponentBase/index.js"
+    ]
+  },
+  {
+    "alias": "InputMask",
+    "input": "packages/components/src/InputMask/InputMask.js",
+    "output": "stories/Inputs/InputMask/doc.json",
+    "composes": [
+      "packages/components/src/Input/Input.js",
+      "packages/base/src/EditorBase/index.js",
+      "packages/base/src/ComponentBase/index.js"
+    ]
+  },
+  {
+    "alias": "InputNumeric",
+    "input": "packages/components/src/InputNumeric/InputNumeric.js",
+    "output": "stories/Inputs/InputNumeric/doc.json",
+    "composes": [
+      "packages/components/src/Input/Input.js",
+      "packages/base/src/EditorBase/index.js",
+      "packages/base/src/ComponentBase/index.js"
+    ]
+  },
+  {
+    "alias": "TabBar",
+    "input": "packages/components/src/TabBar/TabBar.js",
+    "output": "stories/TabBar/doc.json"
+  },
+  {
+    "alias": "TreeView",
+    "input": "packages/components/src/TreeView/TreeView.js",
+    "output": "stories/TreeView/doc.json",
+    "composes": [
+      "packages/base/src/ComponentBase/index.js"
+    ]
+  },
+  {
+    "alias": "Label",
+    "input": "packages/components/src/Label/Label.js",
+    "output": "stories/Label/doc.json",
+    "composes": [
+      "packages/base/src/ComponentBase/index.js"
+    ]
+  },
+  {
+    "alias": "IconMenu",
+    "input": "packages/components/src/IconMenu/IconMenu.js",
+    "output": "stories/Menu/IconMenu/doc.json",
+    "composes": [
+      "packages/base/src/ComponentBase/index.js"
+    ]
+  },
+  {
+    "alias": "Menu",
+    "input": "packages/components/src/Menu/Menu.js",
+    "output": "stories/Menu/Menu/doc.json",
+    "composes": [
+      "packages/base/src/ComponentBase/index.js"
+    ]
+  },
+  {
+    "alias": "Toggle",
+    "input": "packages/components/src/Toggle/Toggle.js",
+    "output": "stories/Toggle/doc.json",
+    "composes": [
+      "packages/base/src/ComponentBase/index.js"
+    ]
+  },
+  {
+    "alias": "Dialog",
+    "input": "packages/components/src/Dialog/Dialog.js",
+    "output": "stories/Dialog/doc.json",
+    "composes": [
+      "packages/base/src/ComponentBase/index.js"
+    ]
+  }
+]

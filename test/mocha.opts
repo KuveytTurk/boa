@@ -1,0 +1,6 @@
+--require @babel/register
+--require ignore-styles
+--reporter dot
+--recursive
+--exit
+test/utils/setup.js

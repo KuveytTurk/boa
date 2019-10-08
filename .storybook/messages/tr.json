@@ -1,0 +1,69 @@
+{
+    "BOA": [
+      {
+        "PropertyName": "Ok",
+        "Description": "Tamam",
+        "LanguageId": 1
+      },
+      {
+        "PropertyName": "Cancel",
+        "Description": "İptal",
+        "LanguageId": 1
+      },
+      {
+        "PropertyName": "Hour",
+        "Description": "Saat",
+        "LanguageId": 1
+      },
+      {
+        "PropertyName": "Minute",
+        "Description": "Dakika",
+        "LanguageId": 1
+      },
+      {
+        "PropertyName": "Second",
+        "Description": "Saniye",
+        "LanguageId": 1
+      },
+      {
+        "PropertyName": "Today",
+        "Description": "Bugün",
+        "LanguageId": 1
+      },
+      {
+        "PropertyName": "Month",
+        "Description": "Ay",
+        "LanguageId": 1
+      },
+      {
+        "PropertyName": "Year",
+        "Description": "Yıl",
+        "LanguageId": 1
+      },
+      {
+        "PropertyName": "Yes",
+        "Description": "Evet",
+        "LanguageId": 1
+      },
+      {
+        "PropertyName": "No",
+        "Description": "Hayır",
+        "LanguageId": 1
+      },
+      {
+        "PropertyName": "TreeviewItemNotSelected",
+        "Description": "Öge seçilmedi",
+        "LanguageId": 1
+      },
+      {
+        "PropertyName": "TreeviewItemFound",
+        "Description": "öge bulundu",
+        "LanguageId": 1
+      },
+      {
+        "PropertyName": "TreeviewItemSelected",
+        "Description": "öge seçildi",
+        "LanguageId": 1
+      }
+    ]
+  }

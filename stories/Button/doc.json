@@ -1,0 +1,366 @@
+{
+	"description": "Buttons allow users to take actions, and make choices, with a single tap.\nThis component is wrapped from `@material-ui/core/Button`.\nIt also renders an `<IconButton />` when the \"type\" prop is \"icon\".",
+	"displayName": "Button",
+	"methods": [
+		{
+			"name": "setDisable",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "value",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "getLabel",
+			"docblock": null,
+			"modifiers": [],
+			"params": [],
+			"returns": null
+		},
+		{
+			"name": "createButtonElement",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "variant",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "createIconButtonElement",
+			"docblock": null,
+			"modifiers": [],
+			"params": [],
+			"returns": null
+		},
+		{
+			"name": "createButton",
+			"docblock": null,
+			"modifiers": [],
+			"params": [],
+			"returns": null
+		}
+	],
+	"props": {
+		"allowLabelCase": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "If `false`, content of the button is shown uppercase.",
+			"defaultValue": {
+				"value": false,
+				"computed": false
+			}
+		},
+		"buttonSize": {
+			"type": {
+				"name": "enum",
+				"value": [
+					{
+						"value": "small",
+						"computed": false
+					},
+					{
+						"value": "medium",
+						"computed": false
+					},
+					{
+						"value": "large",
+						"computed": false
+					}
+				]
+			},
+			"required": false,
+			"description": "Predefined sizes of the button.",
+			"defaultValue": {
+				"value": "medium",
+				"computed": false
+			}
+		},
+		"colorType": {
+			"type": {
+				"name": "enum",
+				"value": [
+					{
+						"value": "default",
+						"computed": false
+					},
+					{
+						"value": "primary",
+						"computed": false
+					},
+					{
+						"value": "secondary",
+						"computed": false
+					}
+				]
+			},
+			"required": false,
+			"description": "Color of the component.\nIt supports the theme colors that make sense for this component."
+		},
+		"dynamicIcon": {
+			"type": {
+				"name": "string"
+			},
+			"required": false,
+			"description": "Icon name from BOA icon library."
+		},
+		"fontIcon": {
+			"type": {
+				"name": "string"
+			},
+			"required": false,
+			"description": "Font icon name from font icon's library.\n@ignore"
+		},
+		"fullWidth": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "If true, the button has the full width of its container."
+		},
+		"icon": {
+			"type": {
+				"name": "any"
+			},
+			"required": false,
+			"description": "Custom icon element to be rendered inside the button."
+		},
+		"iconProperties": {
+			"type": {
+				"name": "object"
+			},
+			"required": false,
+			"description": "Icon props that are passed to the `<Icon />` element."
+		},
+		"mini": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "If `true`, and `variant` is `'fab'`, will use mini floating action button styling."
+		},
+		"onClick": {
+			"type": {
+				"name": "func"
+			},
+			"required": false,
+			"description": "@ignore"
+		},
+		"svgIcon": {
+			"type": {
+				"name": "string"
+			},
+			"required": false,
+			"description": "SVG Icon name from material svg icon library.\n@ignore"
+		},
+		"text": {
+			"type": {
+				"name": "string"
+			},
+			"required": false,
+			"description": "Button content."
+		},
+		"textPosition": {
+			"type": {
+				"name": "enum",
+				"value": [
+					{
+						"value": "center",
+						"computed": false
+					},
+					{
+						"value": "left",
+						"computed": false
+					},
+					{
+						"value": "right",
+						"computed": false
+					}
+				]
+			},
+			"required": false,
+			"description": "Position of the text in the button.\nIt assigns given position to text if button width is greater than the text width.",
+			"defaultValue": {
+				"value": "center",
+				"computed": false
+			}
+		},
+		"textStyle": {
+			"type": {
+				"name": "object"
+			},
+			"required": false,
+			"description": "Styles applied to the span element that wraps the children."
+		},
+		"tooltip": {
+			"type": {
+				"name": "string"
+			},
+			"required": false,
+			"description": "If type is 'icon', a tooltip is generated on the icon button."
+		},
+		"tooltipPosition": {
+			"type": {
+				"name": "string"
+			},
+			"required": false,
+			"description": "Position of the button tooltip."
+		},
+		"type": {
+			"type": {
+				"name": "enum",
+				"value": [
+					{
+						"value": "contained",
+						"computed": false
+					},
+					{
+						"value": "text",
+						"computed": false
+					},
+					{
+						"value": "fab",
+						"computed": false
+					},
+					{
+						"value": "icon",
+						"computed": false
+					}
+				]
+			},
+			"required": false,
+			"description": "Button type should be `contained`, `text`, `fab` or `icon`.",
+			"defaultValue": {
+				"value": "contained",
+				"computed": false
+			}
+		}
+	},
+	"composes": [
+		"@kuveytturk/boa-base"
+	],
+	"composeProps": {
+		"packages/base/src/ComponentBase/index.js": {
+			"componentSize": {
+				"type": {
+					"name": "enum",
+					"value": [
+						{
+							"value": "ComponentSize.LARGE",
+							"computed": true
+						},
+						{
+							"value": "ComponentSize.MEDIUM",
+							"computed": true
+						},
+						{
+							"value": "ComponentSize.SMALL",
+							"computed": true
+						},
+						{
+							"value": "ComponentSize.XSMALL",
+							"computed": true
+						}
+					]
+				},
+				"required": false,
+				"description": "Defines size of the component. The ComponentSize constant is exported from enums.\n@ignore",
+				"defaultValue": {
+					"value": "ComponentSize.LARGE",
+					"computed": true
+				}
+			},
+			"context": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "Defines application requirements such as localization, theme, platform."
+			},
+			"disabled": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "If true, all component functionalities are disabled.",
+				"defaultValue": {
+					"value": false,
+					"computed": false
+				}
+			},
+			"id": {
+				"type": {
+					"name": "string"
+				},
+				"required": false,
+				"description": "All components must have an id prop."
+			},
+			"isVisible": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "@deprecated\n@ignore\nIn the ComponentComposer, we change the visibility of the component with this prop."
+			},
+			"newLine": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "As described in componentSize prop, if one of the components takes part in the new line\non a card we are using this prop.\n@ignore",
+				"defaultValue": {
+					"value": false,
+					"computed": false
+				}
+			},
+			"snapKey": {
+				"type": {
+					"name": "string"
+				},
+				"required": false,
+				"description": "The snapKey property is used to manage snapshots of the child components.\n@ignore"
+			},
+			"snapshot": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "In our SPA, we want to keep the state of each component when a page unmounts.\nAnd when the same page mounts again, the component mounts with the snapshot prop and\nit gets the previous state.\n@ignore"
+			},
+			"style": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "All components must have a style prop."
+			},
+			"valueConstraint": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "The valueConstraint is used for validations on components like limit, required, etc."
+			},
+			"visible": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "In the ComponentComposer, we change the visibility of the component with this prop.",
+				"defaultValue": {
+					"value": true,
+					"computed": false
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,398 @@
+{
+	"description": "Icon Menus are the menus that are opened from icons.\nThey provide options related to the icon and use a minimal space.",
+	"displayName": "IconMenu",
+	"methods": [
+		{
+			"name": "onChange",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "parameters",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "handleClick",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "event",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "handleClose",
+			"docblock": null,
+			"modifiers": [],
+			"params": [],
+			"returns": null
+		}
+	],
+	"props": {
+		"anchorOrigin": {
+			"type": {
+				"name": "shape",
+				"value": {
+					"horizontal": {
+						"name": "enum",
+						"value": [
+							{
+								"value": "left",
+								"computed": false
+							},
+							{
+								"value": "center",
+								"computed": false
+							},
+							{
+								"value": "right",
+								"computed": false
+							}
+						],
+						"required": true
+					},
+					"vertical": {
+						"name": "enum",
+						"value": [
+							{
+								"value": "top",
+								"computed": false
+							},
+							{
+								"value": "center",
+								"computed": false
+							},
+							{
+								"value": "bottom",
+								"computed": false
+							}
+						],
+						"required": true
+					}
+				}
+			},
+			"required": false,
+			"description": "Type of the `IconButton` to render.",
+			"defaultValue": {
+				"value": "{\n  vertical: 'bottom',\n  horizontal: 'left',\n}",
+				"computed": false
+			}
+		},
+		"animated": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "To set origin from outside.",
+			"defaultValue": {
+				"value": true,
+				"computed": false
+			}
+		},
+		"classes": {
+			"type": {
+				"name": "object"
+			},
+			"required": false,
+			"description": "Custom icon for 'IconButton' to render."
+		},
+		"className": {
+			"type": {
+				"name": "string"
+			},
+			"required": false,
+			"description": "Item list."
+		},
+		"customIcon": {
+			"type": {
+				"name": "object"
+			},
+			"required": false,
+			"description": "Menu item list."
+		},
+		"iconStyle": {
+			"type": {
+				"name": "object"
+			},
+			"required": false,
+			"description": "This is the point on the icon where the menu\n`transformOrigin` attaches.\nOptions:\nvertical: [top, middle, bottom]\nhorizontal: [left, center, right]."
+		},
+		"iconType": {
+			"type": {
+				"name": "enum",
+				"value": [
+					{
+						"value": "vertical",
+						"computed": false
+					},
+					{
+						"value": "horizontal",
+						"computed": false
+					},
+					{
+						"value": "custom",
+						"computed": false
+					}
+				]
+			},
+			"required": false,
+			"description": "Type of the `IconButton` to render. If ‘custom’, a customIcon button is required.",
+			"defaultValue": {
+				"value": "vertical",
+				"computed": false
+			}
+		},
+		"isOriginSetted": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "If true, the popover applies transitions when\nit gets added to the DOM."
+		},
+		"items": {
+			"type": {
+				"name": "array"
+			},
+			"required": false,
+			"description": "Menu items with ‘text’ and ‘value’ props."
+		},
+		"menuItems": {
+			"type": {
+				"name": "array"
+			},
+			"required": false,
+			"description": "Overrides the inline-styles of the underlying icon element."
+		},
+		"menuStyle": {
+			"type": {
+				"name": "object"
+			},
+			"required": false,
+			"description": "Overrides the inline-styles of the menu element.",
+			"defaultValue": {
+				"value": "{ minWidth: '240px' }",
+				"computed": false
+			}
+		},
+		"multiple": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "If true, the value can an be array and allows the menu to be multi-selectable.",
+			"defaultValue": {
+				"value": false,
+				"computed": false
+			}
+		},
+		"onChange": {
+			"type": {
+				"name": "func"
+			},
+			"required": false,
+			"description": "If true, the `IconMenu` is opened."
+		},
+		"onClick": {
+			"type": {
+				"name": "func"
+			},
+			"required": false,
+			"description": "Overrides the inline-styles of the root element."
+		},
+		"open": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "This is the point on the menu which sticks to the menu\norigin.\nOptions:\nvertical: [top, middle, bottom]\nhorizontal: [left, center, right].",
+			"defaultValue": {
+				"value": null,
+				"computed": false
+			}
+		},
+		"touchTapCloseDelay": {
+			"type": {
+				"name": "number"
+			},
+			"required": false,
+			"description": "Sets the delay in milliseconds before closing the\nmenu when an item is clicked.\nIf set to 0, then the auto close functionality\nis disabled.",
+			"defaultValue": {
+				"value": 200,
+				"computed": false
+			}
+		},
+		"transformOrigin": {
+			"type": {
+				"name": "shape",
+				"value": {
+					"horizontal": {
+						"name": "enum",
+						"value": [
+							{
+								"value": "left",
+								"computed": false
+							},
+							{
+								"value": "center",
+								"computed": false
+							},
+							{
+								"value": "right",
+								"computed": false
+							}
+						],
+						"required": true
+					},
+					"vertical": {
+						"name": "enum",
+						"value": [
+							{
+								"value": "top",
+								"computed": false
+							},
+							{
+								"value": "center",
+								"computed": false
+							},
+							{
+								"value": "bottom",
+								"computed": false
+							}
+						],
+						"required": true
+					}
+				}
+			},
+			"required": false,
+			"description": "Callback function fired when the IconButton element is clicked.",
+			"defaultValue": {
+				"value": "{\n  vertical: 'top',\n  horizontal: 'left',\n}",
+				"computed": false
+			}
+		}
+	},
+	"composes": [
+		"@kuveytturk/boa-base"
+	],
+	"composeProps": {
+		"packages/base/src/ComponentBase/index.js": {
+			"componentSize": {
+				"type": {
+					"name": "enum",
+					"value": [
+						{
+							"value": "ComponentSize.LARGE",
+							"computed": true
+						},
+						{
+							"value": "ComponentSize.MEDIUM",
+							"computed": true
+						},
+						{
+							"value": "ComponentSize.SMALL",
+							"computed": true
+						},
+						{
+							"value": "ComponentSize.XSMALL",
+							"computed": true
+						}
+					]
+				},
+				"required": false,
+				"description": "Defines size of the component. The ComponentSize constant is exported from enums.\n@ignore",
+				"defaultValue": {
+					"value": "ComponentSize.LARGE",
+					"computed": true
+				}
+			},
+			"context": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "Defines application requirements such as localization, theme, platform."
+			},
+			"disabled": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "If true, all component functionalities are disabled.",
+				"defaultValue": {
+					"value": false,
+					"computed": false
+				}
+			},
+			"id": {
+				"type": {
+					"name": "string"
+				},
+				"required": false,
+				"description": "All components must have an id prop."
+			},
+			"isVisible": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "@deprecated\n@ignore\nIn the ComponentComposer, we change the visibility of the component with this prop."
+			},
+			"newLine": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "As described in componentSize prop, if one of the components takes part in the new line\non a card we are using this prop.\n@ignore",
+				"defaultValue": {
+					"value": false,
+					"computed": false
+				}
+			},
+			"snapKey": {
+				"type": {
+					"name": "string"
+				},
+				"required": false,
+				"description": "The snapKey property is used to manage snapshots of the child components.\n@ignore"
+			},
+			"snapshot": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "In our SPA, we want to keep the state of each component when a page unmounts.\nAnd when the same page mounts again, the component mounts with the snapshot prop and\nit gets the previous state.\n@ignore"
+			},
+			"style": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "All components must have a style prop."
+			},
+			"valueConstraint": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "The valueConstraint is used for validations on components like limit, required, etc."
+			},
+			"visible": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "In the ComponentComposer, we change the visibility of the component with this prop.",
+				"defaultValue": {
+					"value": true,
+					"computed": false
+				}
+			}
+		}
+	}
+}

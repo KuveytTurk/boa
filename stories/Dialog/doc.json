@@ -1,0 +1,463 @@
+{
+	"description": "The Dialog Component is wrapped from `@material-ui/core/Dialog`.\nAlso `DialogHelper` provides a static method called `show`.\nThis method allows creating windows other than the render method.",
+	"displayName": "Dialog",
+	"methods": [
+		{
+			"name": "setTitle",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "title",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "setLeftTitleButton",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "value",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "open",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "open",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "fireClosable",
+			"docblock": null,
+			"modifiers": [],
+			"params": [],
+			"returns": null
+		},
+		{
+			"name": "onEnter",
+			"docblock": null,
+			"modifiers": [],
+			"params": [],
+			"returns": null
+		}
+	],
+	"props": {
+		"autoDetectWindowHeight": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "Dialog children, usually the included sub-components.",
+			"defaultValue": {
+				"value": true,
+				"computed": false
+			}
+		},
+		"children": {
+			"type": {
+				"name": "node"
+			},
+			"required": false,
+			"description": "Dialog children, usually the included sub-components."
+		},
+		"classes": {
+			"type": {
+				"name": "object"
+			},
+			"required": false,
+			"description": "@ignore"
+		},
+		"className": {
+			"type": {
+				"name": "string"
+			},
+			"required": false,
+			"description": "@ignore"
+		},
+		"content": {
+			"type": {
+				"name": "any"
+			},
+			"required": false,
+			"description": "If `true`, hitting escape does not fire the `onClose` callback."
+		},
+		"dialogBoxContentPadding": {
+			"type": {
+				"name": "any"
+			},
+			"required": false,
+			"description": "If `true`, the dialog is shown full-screen.",
+			"defaultValue": {
+				"value": "24px",
+				"computed": false
+			}
+		},
+		"disableBackdropClick": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "If `true`, clicking the backdrop does not fire the `onClose` callback.",
+			"defaultValue": {
+				"value": false,
+				"computed": false
+			}
+		},
+		"disableEscapeKeyDown": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "If `true`, hitting escape does not fire the `onClose` callback.",
+			"defaultValue": {
+				"value": false,
+				"computed": false
+			}
+		},
+		"disableRestoreFocus": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "If true, the modal does not restore focus to previously focused element once modal is hidden."
+		},
+		"fullScreen": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "If `true`, the dialog is shown full-screen.",
+			"defaultValue": {
+				"value": false,
+				"computed": false
+			}
+		},
+		"fullWidth": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "If specified, extends dialog to max width.",
+			"defaultValue": {
+				"value": false,
+				"computed": false
+			}
+		},
+		"maxWidth": {
+			"type": {
+				"name": "enum",
+				"value": [
+					{
+						"value": "xs",
+						"computed": false
+					},
+					{
+						"value": "sm",
+						"computed": false
+					},
+					{
+						"value": "md",
+						"computed": false
+					},
+					{
+						"value": false,
+						"computed": false
+					}
+				]
+			},
+			"required": false,
+			"description": "Determine the max width of the dialog.\nThe dialog width expands with the size of the screen, this property is useful\non the desktop where you might need some coherent different width size across your\napplication. Set to `false` to disable `maxWidth`."
+		},
+		"modal": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "Force the user to use one of the actions in the dialog.\nClicking outside of the dialog will not trigger the `onRequestClose`.",
+			"defaultValue": {
+				"value": false,
+				"computed": false
+			}
+		},
+		"onBackdropClick": {
+			"type": {
+				"name": "func"
+			},
+			"required": false,
+			"description": ""
+		},
+		"onClose": {
+			"type": {
+				"name": "func"
+			},
+			"required": false,
+			"description": "Callback fired when the component requests to be closed.\n\n@param {object} event The event source of the callback"
+		},
+		"onEnter": {
+			"type": {
+				"name": "func"
+			},
+			"required": false,
+			"description": "Callback fired before the dialog is entered."
+		},
+		"onEntered": {
+			"type": {
+				"name": "func"
+			},
+			"required": false,
+			"description": "Callback fired when the dialog is entered."
+		},
+		"onEntering": {
+			"type": {
+				"name": "func"
+			},
+			"required": false,
+			"description": "Callback fired when the dialog is entering."
+		},
+		"onEscapeKeyDown": {
+			"type": {
+				"name": "func"
+			},
+			"required": false,
+			"description": "Callback fired when the escape key is pressed,\n`disableKeyboard` is false and the modal is in focus."
+		},
+		"onExit": {
+			"type": {
+				"name": "func"
+			},
+			"required": false,
+			"description": "Callback fired before the dialog is closed."
+		},
+		"onExited": {
+			"type": {
+				"name": "func"
+			},
+			"required": false,
+			"description": "Callback fired when the dialog is closed."
+		},
+		"onExiting": {
+			"type": {
+				"name": "func"
+			},
+			"required": false,
+			"description": "Callback fired when the dialog is closing."
+		},
+		"open": {
+			"type": {
+				"name": "bool"
+			},
+			"required": true,
+			"description": "If `true`, the dialog is open."
+		},
+		"PaperProps": {
+			"type": {
+				"name": "object"
+			},
+			"required": false,
+			"description": "Properties applied to the `Paper` element."
+		},
+		"repositionOnUpdate": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "Determines whether the dialog should be repositioned when its contents are updated.",
+			"defaultValue": {
+				"value": true,
+				"computed": false
+			}
+		},
+		"showHeader": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "If true, the dialog has a header area.",
+			"defaultValue": {
+				"value": true,
+				"computed": false
+			}
+		},
+		"titleWithCloseButtonEnabled": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "If true, the modal will not restore focus to previously focused element once modal is hidden.",
+			"defaultValue": {
+				"value": false,
+				"computed": false
+			}
+		},
+		"transition": {
+			"type": {
+				"name": "union",
+				"value": [
+					{
+						"name": "string"
+					},
+					{
+						"name": "func"
+					}
+				]
+			},
+			"required": false,
+			"description": "Transition component."
+		},
+		"transitionDuration": {
+			"type": {
+				"name": "union",
+				"value": [
+					{
+						"name": "number"
+					},
+					{
+						"name": "shape",
+						"value": {
+							"enter": {
+								"name": "number",
+								"required": false
+							},
+							"exit": {
+								"name": "number",
+								"required": false
+							}
+						}
+					}
+				]
+			},
+			"required": false,
+			"description": "Duration for the transition, in milliseconds.\nYou may specify a single timeout for all transitions, or individually for an object."
+		}
+	},
+	"composes": [
+		"@kuveytturk/boa-base"
+	],
+	"composeProps": {
+		"packages/base/src/ComponentBase/index.js": {
+			"componentSize": {
+				"type": {
+					"name": "enum",
+					"value": [
+						{
+							"value": "ComponentSize.LARGE",
+							"computed": true
+						},
+						{
+							"value": "ComponentSize.MEDIUM",
+							"computed": true
+						},
+						{
+							"value": "ComponentSize.SMALL",
+							"computed": true
+						},
+						{
+							"value": "ComponentSize.XSMALL",
+							"computed": true
+						}
+					]
+				},
+				"required": false,
+				"description": "Defines size of the component. The ComponentSize constant is exported from enums.\n@ignore",
+				"defaultValue": {
+					"value": "ComponentSize.LARGE",
+					"computed": true
+				}
+			},
+			"context": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "Defines application requirements such as localization, theme, platform."
+			},
+			"disabled": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "If true, all component functionalities are disabled.",
+				"defaultValue": {
+					"value": false,
+					"computed": false
+				}
+			},
+			"id": {
+				"type": {
+					"name": "string"
+				},
+				"required": false,
+				"description": "All components must have an id prop."
+			},
+			"isVisible": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "@deprecated\n@ignore\nIn the ComponentComposer, we change the visibility of the component with this prop."
+			},
+			"newLine": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "As described in componentSize prop, if one of the components takes part in the new line\non a card we are using this prop.\n@ignore",
+				"defaultValue": {
+					"value": false,
+					"computed": false
+				}
+			},
+			"snapKey": {
+				"type": {
+					"name": "string"
+				},
+				"required": false,
+				"description": "The snapKey property is used to manage snapshots of the child components.\n@ignore"
+			},
+			"snapshot": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "In our SPA, we want to keep the state of each component when a page unmounts.\nAnd when the same page mounts again, the component mounts with the snapshot prop and\nit gets the previous state.\n@ignore"
+			},
+			"style": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "All components must have a style prop."
+			},
+			"valueConstraint": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "The valueConstraint is used for validations on components like limit, required, etc."
+			},
+			"visible": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "In the ComponentComposer, we change the visibility of the component with this prop.",
+				"defaultValue": {
+					"value": true,
+					"computed": false
+				}
+			}
+		}
+	}
+}

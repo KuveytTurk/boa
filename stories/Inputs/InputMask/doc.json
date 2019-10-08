@@ -1,0 +1,765 @@
+{
+	"description": "Text fields let users enter and edit text with the specified mask.",
+	"displayName": "InputMask",
+	"methods": [
+		{
+			"name": "setProps",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "props",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "isCorrectFormatText",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "mask",
+					"type": null
+				},
+				{
+					"name": "text",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "onChange",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "e",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "onClearClick",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "e",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "onKeyDown",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "e",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "setDisable",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "value",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "getValue",
+			"docblock": null,
+			"modifiers": [],
+			"params": [],
+			"returns": null
+		},
+		{
+			"name": "resetValue",
+			"docblock": null,
+			"modifiers": [],
+			"params": [],
+			"returns": null
+		},
+		{
+			"name": "onFocus",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "e",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "onBlur",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "e",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "setCounter",
+			"docblock": null,
+			"modifiers": [],
+			"params": [],
+			"returns": null
+		},
+		{
+			"name": "generateHelperText",
+			"docblock": null,
+			"modifiers": [],
+			"params": [],
+			"returns": null
+		},
+		{
+			"name": "runRender",
+			"docblock": null,
+			"modifiers": [],
+			"params": [],
+			"returns": null
+		},
+		{
+			"name": "setTestResult",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "value",
+					"type": null
+				}
+			],
+			"returns": null
+		}
+	],
+	"props": {
+		"countryCode": {
+			"type": {
+				"name": "string"
+			},
+			"required": false,
+			"description": "Country code for the masked IBAN input elements.",
+			"defaultValue": {
+				"value": "TR",
+				"computed": false
+			}
+		},
+		"fullWidth": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "If true, the width property of the field is assigned 100%. Default is false.",
+			"defaultValue": {
+				"value": true,
+				"computed": false
+			}
+		},
+		"inputType": {
+			"type": {
+				"name": "string"
+			},
+			"required": false,
+			"description": "Specifies the type of input to display\nsuch as \"password\" or \"text\".",
+			"defaultValue": {
+				"value": "text",
+				"computed": false
+			}
+		},
+		"mask": {
+			"type": {
+				"name": "string"
+			},
+			"required": false,
+			"description": "Mask of the input element. If the type is selected 'Custom', you can define your own mask.",
+			"defaultValue": {
+				"value": "aa nnn",
+				"computed": false
+			}
+		},
+		"maxLength": {
+			"type": {
+				"name": "number"
+			},
+			"required": false,
+			"description": "Limit of the input text’s character length.",
+			"defaultValue": {
+				"value": -1,
+				"computed": false
+			}
+		},
+		"noWrap": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "If true, the text inside the input does not go bottom line. Default is true.",
+			"defaultValue": {
+				"value": true,
+				"computed": false
+			}
+		},
+		"showCounter": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "Shows the counter label if set to true. Default is false.",
+			"defaultValue": {
+				"value": true,
+				"computed": false
+			}
+		},
+		"type": {
+			"type": {
+				"name": "enum",
+				"value": [
+					{
+						"value": "CreditCard",
+						"computed": false
+					},
+					{
+						"value": "IBAN",
+						"computed": false
+					},
+					{
+						"value": "MobilePhoneNumber",
+						"computed": false
+					},
+					{
+						"value": "PhoneNumber",
+						"computed": false
+					},
+					{
+						"value": "Custom",
+						"computed": false
+					}
+				]
+			},
+			"required": false,
+			"description": "Specifies type of the mask to display\nsuch as \"CreditCard\", \"PhoneNumber\", etc.",
+			"defaultValue": {
+				"value": "Custom",
+				"computed": false
+			}
+		},
+		"value": {
+			"defaultValue": {
+				"value": "",
+				"computed": false
+			},
+			"required": false
+		}
+	},
+	"composes": [
+		"../Input"
+	],
+	"composeProps": {
+		"packages/components/src/Input/Input.js": {
+			"bottomLeftInfo": {
+				"type": {
+					"name": "string"
+				},
+				"required": false,
+				"description": "Information text that is located in bottom left side of the input element."
+			},
+			"bottomLeftInfoEnable": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "If `true`, the bottomLeftInfo is shown.",
+				"defaultValue": {
+					"value": true,
+					"computed": false
+				}
+			},
+			"bottomRightInfo": {
+				"type": {
+					"name": "string"
+				},
+				"required": false,
+				"description": "Information text that is located in bottom right side of the input element."
+			},
+			"bottomRightInfoEnable": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "If `true`, the bottomRightInfo is shown.",
+				"defaultValue": {
+					"value": true,
+					"computed": false
+				}
+			},
+			"defaultValue": {
+				"type": {
+					"name": "any"
+				},
+				"required": false,
+				"description": "The text string used as the default value.",
+				"defaultValue": {
+					"value": "",
+					"computed": false
+				}
+			},
+			"disabledCounterCharacter": {
+				"type": {
+					"name": "string"
+				},
+				"required": false,
+				"description": "Character that is not involved in counting operation.",
+				"defaultValue": {
+					"value": "",
+					"computed": false
+				}
+			},
+			"errorStyle": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "Styles applied to the input element in the error state."
+			},
+			"errorText": {
+				"type": {
+					"name": "string"
+				},
+				"required": false,
+				"description": "Message to display when the input is in an error state.\n When this is present, the component is also visually highlighted to indicate it is in error."
+			},
+			"floatingLabelStyle": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "The style object to use to override floating label styles."
+			},
+			"floatingLabelText": {
+				"type": {
+					"name": "string"
+				},
+				"required": false,
+				"description": "The content to use for the floating label element."
+			},
+			"formControlStyle": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "Override the inline-styles of the root element."
+			},
+			"fullWidth": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "If `false`, the width property of the field is assigned 100.",
+				"defaultValue": {
+					"value": true,
+					"computed": false
+				}
+			},
+			"helperText": {
+				"type": {
+					"name": "string"
+				},
+				"required": false,
+				"description": "The content to use for the helper text element."
+			},
+			"hintText": {
+				"type": {
+					"name": "string"
+				},
+				"required": false,
+				"description": "The hint content to display."
+			},
+			"id": {
+				"type": {
+					"name": "string"
+				},
+				"required": false,
+				"description": "The id prop for the text field."
+			},
+			"inlineGridMode": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "If `true`, the component transforms itself into grid mode.",
+				"defaultValue": {
+					"value": false,
+					"computed": false
+				}
+			},
+			"inputAlign": {
+				"type": {
+					"name": "enum",
+					"value": [
+						{
+							"value": "left",
+							"computed": false
+						},
+						{
+							"value": "right",
+							"computed": false
+						},
+						{
+							"value": "center",
+							"computed": false
+						}
+					]
+				},
+				"required": false,
+				"description": "Alingment of the text in the input element."
+			},
+			"inputProps": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "Attributes applied to the input element."
+			},
+			"inputStyle": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "Override the inline-styles of the TextField's input element.\nWhen multiLine is false: defines the style of the input element.\nWhen multiLine is true: defines the style of the container of the textarea."
+			},
+			"maskedMaxLength": {
+				"type": {
+					"name": "number"
+				},
+				"required": false,
+				"description": "Maximum character count of masked input element."
+			},
+			"maxLength": {
+				"type": {
+					"name": "number"
+				},
+				"required": false,
+				"description": "Maximum character count of input element."
+			},
+			"multiLine": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "If true, a textarea element is rendered.\nThe textarea also expands and shrinks according to the number of lines.",
+				"defaultValue": {
+					"value": false,
+					"computed": false
+				}
+			},
+			"name": {
+				"type": {
+					"name": "string"
+				},
+				"required": false,
+				"description": "Name applied to the input."
+			},
+			"noWrap": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "If `true`, the element is not wrapped."
+			},
+			"onBlur": {
+				"type": {
+					"name": "func"
+				},
+				"required": false,
+				"description": "Callback function for the input blur."
+			},
+			"onChange": {
+				"type": {
+					"name": "func"
+				},
+				"required": false,
+				"description": "Callback function when the input changed."
+			},
+			"onChangeSync": {
+				"type": {
+					"name": "func"
+				},
+				"required": false,
+				"description": "Callback function when the input is changed sync."
+			},
+			"onClearClick": {
+				"type": {
+					"name": "func"
+				},
+				"required": false,
+				"description": "Callback function when clear button of the input is clicked."
+			},
+			"onFocus": {
+				"type": {
+					"name": "func"
+				},
+				"required": false,
+				"description": "Callback function when the input is focused."
+			},
+			"onKeyDown": {
+				"type": {
+					"name": "func"
+				},
+				"required": false,
+				"description": "Callback function when a key is down."
+			},
+			"onKeyUp": {
+				"type": {
+					"name": "func"
+				},
+				"required": false,
+				"description": "Callback function when a key is up."
+			},
+			"onTimerFinished": {
+				"type": {
+					"name": "func"
+				},
+				"required": false,
+				"description": "Callback function when the timer ends."
+			},
+			"prefixText": {
+				"type": {
+					"name": "any"
+				},
+				"required": false,
+				"description": "Shows prefix text of the input element text."
+			},
+			"rows": {
+				"type": {
+					"name": "number"
+				},
+				"required": false,
+				"description": "Number of rows to display when multiLine option is set to true.",
+				"defaultValue": {
+					"value": 1,
+					"computed": false
+				}
+			},
+			"rowsMax": {
+				"type": {
+					"name": "number"
+				},
+				"required": false,
+				"description": "Maximum number of rows to display when\nmultiLine option is set to true."
+			},
+			"showClearButton": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "Shows clear button on the right side of the component.",
+				"defaultValue": {
+					"value": false,
+					"computed": false
+				}
+			},
+			"showCounter": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "Shows counter on the right bottom info.",
+				"defaultValue": {
+					"value": false,
+					"computed": false
+				}
+			},
+			"suffixText": {
+				"type": {
+					"name": "any"
+				},
+				"required": false,
+				"description": "Shows suffix text of the input element text."
+			},
+			"textSelection": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "Sets start and end positions of the current text selection."
+			},
+			"timerDuration": {
+				"type": {
+					"name": "number"
+				},
+				"required": false,
+				"description": "Timer shown on the right bottom info, showing duration in seconds."
+			},
+			"type": {
+				"type": {
+					"name": "enum",
+					"value": [
+						{
+							"value": "password",
+							"computed": false
+						},
+						{
+							"value": "text",
+							"computed": false
+						},
+						{
+							"value": "numeric",
+							"computed": false
+						}
+					]
+				},
+				"required": false,
+				"description": "Specifies type of the input to display\nsuch as \"password\" or \"text\"."
+			},
+			"underlineShow": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "If true, the underline is shown.",
+				"defaultValue": {
+					"value": true,
+					"computed": false
+				}
+			},
+			"value": {
+				"type": {
+					"name": "any"
+				},
+				"required": false,
+				"description": "Value of the text field."
+			}
+		},
+		"packages/base/src/ComponentBase/index.js": {
+			"componentSize": {
+				"type": {
+					"name": "enum",
+					"value": [
+						{
+							"value": "ComponentSize.LARGE",
+							"computed": true
+						},
+						{
+							"value": "ComponentSize.MEDIUM",
+							"computed": true
+						},
+						{
+							"value": "ComponentSize.SMALL",
+							"computed": true
+						},
+						{
+							"value": "ComponentSize.XSMALL",
+							"computed": true
+						}
+					]
+				},
+				"required": false,
+				"description": "Defines size of the component. The ComponentSize constant is exported from enums.\n@ignore",
+				"defaultValue": {
+					"value": "ComponentSize.LARGE",
+					"computed": true
+				}
+			},
+			"context": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "Defines application requirements such as localization, theme, platform."
+			},
+			"disabled": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "If true, all component functionalities are disabled.",
+				"defaultValue": {
+					"value": false,
+					"computed": false
+				}
+			},
+			"id": {
+				"type": {
+					"name": "string"
+				},
+				"required": false,
+				"description": "All components must have an id prop."
+			},
+			"isVisible": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "@deprecated\n@ignore\nIn the ComponentComposer, we change the visibility of the component with this prop."
+			},
+			"newLine": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "As described in componentSize prop, if one of the components takes part in the new line\non a card we are using this prop.\n@ignore",
+				"defaultValue": {
+					"value": false,
+					"computed": false
+				}
+			},
+			"snapKey": {
+				"type": {
+					"name": "string"
+				},
+				"required": false,
+				"description": "The snapKey property is used to manage snapshots of the child components.\n@ignore"
+			},
+			"snapshot": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "In our SPA, we want to keep the state of each component when a page unmounts.\nAnd when the same page mounts again, the component mounts with the snapshot prop and\nit gets the previous state.\n@ignore"
+			},
+			"style": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "All components must have a style prop."
+			},
+			"valueConstraint": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "The valueConstraint is used for validations on components like limit, required, etc."
+			},
+			"visible": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "In the ComponentComposer, we change the visibility of the component with this prop.",
+				"defaultValue": {
+					"value": true,
+					"computed": false
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,61 @@
+{
+  "name": "@kuveytturk/boa-components",
+  "private": true,
+  "author": "Kuveyt Turk BOA One Team",
+  "version": "0.1.14",
+  "description": "React components that implement Google's Material Design.",
+  "keywords": [
+    "react",
+    "react-component",
+    "material design"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kuveytturk/boa.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kuveytturk/boa/issues"
+  },
+  "scripts": {
+    "prebuild": "rimraf build",
+    "build:es2015": "cross-env NODE_ENV=production babel --config-file ../../babel.config.js src --out-dir ./build --ignore \"src/**/*.test.js\" ",
+    "build:copy-files": "babel-node --config-file ../../babel.config.js ./scripts/copy-files.js",
+    "build": "yarn build:es2015 && yarn build:copy-files"
+  },
+  "dependencies": {
+    "@kuveytturk/boa-utils": "^0.1.1",
+    "@kuveytturk/boa-base": "^0.1.1",
+    "@material-ui/core": "3.9.2",
+    "@material-ui/icons": "3.0.2",
+    "classnames": "^2.2.6",
+    "highlight.js": "^9.11.0",
+    "iban": "^0.0.10",
+    "infinite-tree": "^1.16.2",
+    "jquery": "^3.4.0",
+    "keycode": "^2.2.0",
+    "lodash": "^4.17.13",
+    "perfect-scrollbar": "^1.4.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-draggable": "^3.0.3",
+    "react-event-listener": "^0.6.4",
+    "react-json-view": "^1.19.1",
+    "react-resize-detector": "^3.2.1",
+    "react-virtualized": "^9.21.0",
+    "react-virtualized-tree": "^2.3.10",
+    "reselect": "^4.0.0",
+    "scroll": "^2.0.3",
+    "shallowequal": "^0.2.2",
+    "stifle": "^1.0.2",
+    "warning": "^3.0.0"
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  }
+}

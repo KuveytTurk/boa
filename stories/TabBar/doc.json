@@ -1,0 +1,506 @@
+{
+	"description": "Tabs make it easy to explore and switch between different views or functional aspects of an app or to browse categorized data sets.",
+	"displayName": "TabBar",
+	"methods": [
+		{
+			"name": "resetValue",
+			"docblock": null,
+			"modifiers": [],
+			"params": [],
+			"returns": null
+		},
+		{
+			"name": "scrollStateUpdate",
+			"docblock": null,
+			"modifiers": [],
+			"params": [],
+			"returns": null
+		},
+		{
+			"name": "updateBTabBarDynamic",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "tabItems",
+					"type": null
+				},
+				{
+					"name": "value",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "handleChange",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "event",
+					"type": null
+				},
+				{
+					"name": "value",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "handleRightIconClick",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "value",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "handleLeftIconClick",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "value",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "handleTabItemChange",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "value",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "getLeftIconButton",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "isLeftIconButtonVisibile",
+					"type": null
+				},
+				{
+					"name": "item",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "getRightIconButton",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "isRightIconButtonVisibile",
+					"type": null
+				},
+				{
+					"name": "item",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "getTabLabel",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "item",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "renderTabScrollButton",
+			"docblock": null,
+			"modifiers": [],
+			"params": [],
+			"returns": null
+		},
+		{
+			"name": "getTabItems",
+			"docblock": null,
+			"modifiers": [],
+			"params": [],
+			"returns": null
+		},
+		{
+			"name": "mouseOver",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "value",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "mouseOut",
+			"docblock": null,
+			"modifiers": [],
+			"params": [],
+			"returns": null
+		},
+		{
+			"name": "getTabContents",
+			"docblock": null,
+			"modifiers": [],
+			"params": [],
+			"returns": null
+		},
+		{
+			"name": "getBorderBottomStyle",
+			"docblock": null,
+			"modifiers": [],
+			"params": [],
+			"returns": null
+		},
+		{
+			"name": "renderDefault",
+			"docblock": null,
+			"modifiers": [],
+			"params": [],
+			"returns": null
+		},
+		{
+			"name": "renderPage",
+			"docblock": null,
+			"modifiers": [],
+			"params": [],
+			"returns": null
+		},
+		{
+			"name": "renderCard",
+			"docblock": null,
+			"modifiers": [],
+			"params": [],
+			"returns": null
+		},
+		{
+			"name": "getRightIconButtonForAppBar",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "isRightIconButtonVisibile",
+					"type": null
+				},
+				{
+					"name": "value",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "getTabLabelForAppBar",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "item",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "renderAppBar",
+			"docblock": null,
+			"modifiers": [],
+			"params": [],
+			"returns": null
+		}
+	],
+	"props": {
+		"centered": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "If `true`, the tabs are centered.\nThis property is intended for large views."
+		},
+		"children": {
+			"type": {
+				"name": "node"
+			},
+			"required": false,
+			"description": "Content of the component."
+		},
+		"classes": {
+			"type": {
+				"name": "object"
+			},
+			"required": false,
+			"description": "@ignore\nOverride or extend the styles applied to the component.\nSee [CSS API](#css) below for more details."
+		},
+		"className": {
+			"type": {
+				"name": "string"
+			},
+			"required": false,
+			"description": "@ignore"
+		},
+		"containerType": {
+			"type": {
+				"name": "enum",
+				"value": [
+					{
+						"value": "default",
+						"computed": false
+					},
+					{
+						"value": "page",
+						"computed": false
+					},
+					{
+						"value": "card",
+						"computed": false
+					}
+				]
+			},
+			"required": false,
+			"description": "Indicates location of the tabs. Each container type has its own style."
+		},
+		"defaultValue": {
+			"type": {
+				"name": "any"
+			},
+			"required": false,
+			"description": "The default value of the selected `Tab`.",
+			"defaultValue": {
+				"value": 0,
+				"computed": false
+			}
+		},
+		"fullWidth": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "If `true`, the tabs expand to use all the available space.\nThis property is intended for small views, like on mobile.",
+			"defaultValue": {
+				"value": true,
+				"computed": false
+			}
+		},
+		"indicatorClassName": {
+			"type": {
+				"name": "string"
+			},
+			"required": false,
+			"description": "@ignore"
+		},
+		"indicatorColor": {
+			"type": {
+				"name": "union",
+				"value": [
+					{
+						"name": "string"
+					},
+					{
+						"name": "enum",
+						"value": [
+							{
+								"value": "secondary",
+								"computed": false
+							},
+							{
+								"value": "primary",
+								"computed": false
+							}
+						]
+					}
+				]
+			},
+			"required": false,
+			"description": "Determines color of the indicator."
+		},
+		"isContentDisabled": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "If `true`, contents of tabs are not shown.",
+			"defaultValue": {
+				"value": false,
+				"computed": false
+			}
+		},
+		"leftIcon": {
+			"type": {
+				"name": "union",
+				"value": [
+					{
+						"name": "string"
+					},
+					{
+						"name": "node"
+					}
+				]
+			},
+			"required": false,
+			"description": "The icon button is placed on the left side of tabs.\nIt renders a dynamicIcon with a string prop.\nIt also renders a React Element."
+		},
+		"leftIconButtonVisibility": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "If `false`, the left icon is not shown.",
+			"defaultValue": {
+				"value": false,
+				"computed": false
+			}
+		},
+		"mode": {
+			"type": {
+				"name": "enum",
+				"value": [
+					{
+						"value": "primary",
+						"computed": false
+					},
+					{
+						"value": "secondary",
+						"computed": false
+					}
+				]
+			},
+			"required": false,
+			"description": "If `primary`, the tabs are colored with the primary color of the current theme.",
+			"defaultValue": {
+				"value": "primary",
+				"computed": false
+			}
+		},
+		"onChange": {
+			"type": {
+				"name": "func"
+			},
+			"required": false,
+			"description": "Callback fired when the value changes.\n\n@param {object} event The event source of the callback\n@param {number} value We default to the index of the child"
+		},
+		"onRightIconClick": {
+			"type": {
+				"name": "func"
+			},
+			"required": false,
+			"description": "Callback fired when the rightIconClick.\n\n@param {object} event The event source of the callback\n@param {number} value We default to the index of the child"
+		},
+		"rightIconButtonVisibility": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "The right icon of the component generated inside of the component.\nrightIconButtonVisibility hides the rightIcon.",
+			"defaultValue": {
+				"value": false,
+				"computed": false
+			}
+		},
+		"scrollable": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "If `true`, it invokes scrolling properties and allows horizontally\nscrolling (or swiping) of the tab bar."
+		},
+		"scrollButtons": {
+			"type": {
+				"name": "enum",
+				"value": [
+					{
+						"value": "auto",
+						"computed": false
+					},
+					{
+						"value": "on",
+						"computed": false
+					},
+					{
+						"value": "off",
+						"computed": false
+					}
+				]
+			},
+			"required": false,
+			"description": "Determines behavior of the scroll buttons when tabs are set to scroll.\n`auto` shows scroll buttons on medium and larger viewports.\n`on` always shows scroll buttons.\n`off` never shows scroll buttons."
+		},
+		"tabItems": {
+			"type": {
+				"name": "array"
+			},
+			"required": false,
+			"description": "Tabs will be rendered in TabBar.",
+			"defaultValue": {
+				"value": [],
+				"computed": false
+			}
+		},
+		"TabScrollButton": {
+			"type": {
+				"name": "union",
+				"value": [
+					{
+						"name": "string"
+					},
+					{
+						"name": "func"
+					}
+				]
+			},
+			"required": false,
+			"description": "The component used to render the scroll buttons."
+		},
+		"tabTemplateStyle": {
+			"type": {
+				"name": "object"
+			},
+			"required": false,
+			"description": "Override the style of tab contents."
+		},
+		"value": {
+			"type": {
+				"name": "any"
+			},
+			"required": false,
+			"description": "The value of the currently selected `Tab`.\nIf you don't want to make tabs selectable, you can set this property to `false`.",
+			"defaultValue": {
+				"value": 0,
+				"computed": false
+			}
+		},
+		"disableIcons": {
+			"defaultValue": {
+				"value": false,
+				"computed": false
+			},
+			"required": false
+		}
+	},
+	"composes": [
+		"@kuveytturk/boa-base"
+	],
+	"composeProps": {}
+}

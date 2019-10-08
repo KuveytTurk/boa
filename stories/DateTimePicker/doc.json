@@ -1,0 +1,636 @@
+{
+	"description": "The DateTimePicker allows users to enter a date and time by choosing a datetime.\nIt is created using several components and directives that work together.",
+	"displayName": "DateTimePicker",
+	"methods": [
+		{
+			"name": "onChange",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "event",
+					"type": null
+				},
+				{
+					"name": "value",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "dateOnChange",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "event",
+					"type": null
+				},
+				{
+					"name": "value",
+					"type": null
+				},
+				{
+					"name": "addTimezoneOffset",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "timeOnChange",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "event",
+					"type": null
+				},
+				{
+					"name": "value",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "handleRemoveDate",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "e",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "handleAddDate",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "e",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "dateUpdate",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "oldDate",
+					"type": null
+				},
+				{
+					"name": "newDate",
+					"type": null
+				},
+				{
+					"name": "changeType",
+					"type": null
+				},
+				{
+					"name": "isSetState",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "getValue",
+			"docblock": null,
+			"modifiers": [],
+			"params": [],
+			"returns": null
+		},
+		{
+			"name": "resetValue",
+			"docblock": null,
+			"modifiers": [],
+			"params": [],
+			"returns": null
+		},
+		{
+			"name": "setDisable",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "value",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "getSnapshot",
+			"docblock": null,
+			"modifiers": [],
+			"params": [],
+			"returns": null
+		},
+		{
+			"name": "setSnapshot",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "snapshot",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "validateConstraint",
+			"docblock": null,
+			"modifiers": [],
+			"params": [],
+			"returns": null
+		}
+	],
+	"props": {
+		"cancelLabel": {
+			"type": {
+				"name": "string"
+			},
+			"required": false,
+			"description": "Cancel label."
+		},
+		"canSelectOldDates": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "If `false`, selecting past dates is not allowed.",
+			"defaultValue": {
+				"value": true,
+				"computed": false
+			}
+		},
+		"canSelectSpecialDays": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "If `false`, selecting special days is not allowed.",
+			"defaultValue": {
+				"value": false,
+				"computed": false
+			}
+		},
+		"canSelectWeekendDays": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "If `false`, selecting weekend days is not allowed.",
+			"defaultValue": {
+				"value": false,
+				"computed": false
+			}
+		},
+		"dateOnChange": {
+			"type": {
+				"name": "func"
+			},
+			"required": false,
+			"description": "@ignore"
+		},
+		"defaultValue": {
+			"type": {
+				"name": "union",
+				"value": [
+					{
+						"name": "string"
+					},
+					{
+						"name": "instanceOf",
+						"value": "Date"
+					}
+				]
+			},
+			"required": false,
+			"description": "Default selected value for uncontrolled usage.\nProp can be a Date object or a UTC formatted string.",
+			"defaultValue": {
+				"value": null,
+				"computed": false
+			}
+		},
+		"errorTextDate": {
+			"type": {
+				"name": "string"
+			},
+			"required": false,
+			"description": "Error text for the date part of the component."
+		},
+		"errorTextTime": {
+			"type": {
+				"name": "string"
+			},
+			"required": false,
+			"description": "Error text for the time part of the component."
+		},
+		"firstDayOfWeek": {
+			"type": {
+				"name": "enum",
+				"value": [
+					{
+						"value": 0,
+						"computed": false
+					},
+					{
+						"value": 1,
+						"computed": false
+					},
+					{
+						"value": 2,
+						"computed": false
+					},
+					{
+						"value": 3,
+						"computed": false
+					},
+					{
+						"value": 4,
+						"computed": false
+					},
+					{
+						"value": 5,
+						"computed": false
+					},
+					{
+						"value": 6,
+						"computed": false
+					}
+				]
+			},
+			"required": false,
+			"description": "First day of the week. Default: 1, Monday.",
+			"defaultValue": {
+				"value": 1,
+				"computed": false
+			}
+		},
+		"floatingLabelTextDate": {
+			"type": {
+				"name": "string"
+			},
+			"required": false,
+			"description": "Floating label text for the date input.",
+			"defaultValue": {
+				"value": "",
+				"computed": false
+			}
+		},
+		"floatingLabelTextTime": {
+			"type": {
+				"name": "string"
+			},
+			"required": false,
+			"description": "Floating label text for the text input.",
+			"defaultValue": {
+				"value": "",
+				"computed": false
+			}
+		},
+		"format": {
+			"type": {
+				"name": "string"
+			},
+			"required": false,
+			"description": "Picker format",
+			"defaultValue": {
+				"value": "DDMMYYYY hmmss",
+				"computed": false
+			}
+		},
+		"fullWidth": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "If `false`, width property of the field is assigned 100.",
+			"defaultValue": {
+				"value": true,
+				"computed": false
+			}
+		},
+		"hintTextDate": {
+			"type": {
+				"name": "string"
+			},
+			"required": false,
+			"description": "Hint text for the date input.",
+			"defaultValue": {
+				"value": "",
+				"computed": false
+			}
+		},
+		"hintTextTime": {
+			"type": {
+				"name": "string"
+			},
+			"required": false,
+			"description": "Hint text for the text input.",
+			"defaultValue": {
+				"value": "",
+				"computed": false
+			}
+		},
+		"inlineGridMode": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "OK",
+			"defaultValue": {
+				"value": false,
+				"computed": false
+			}
+		},
+		"isBusiness": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "@ignore",
+			"defaultValue": {
+				"value": false,
+				"computed": false
+			}
+		},
+		"isFlexMode": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "isFlexMode",
+			"defaultValue": {
+				"value": false,
+				"computed": false
+			}
+		},
+		"maxDate": {
+			"type": {
+				"name": "union",
+				"value": [
+					{
+						"name": "string"
+					},
+					{
+						"name": "instanceOf",
+						"value": "Date"
+					}
+				]
+			},
+			"required": false,
+			"description": "Selectable max date. Prop can be a Date object or a UTC formatted string.",
+			"defaultValue": {
+				"value": "2099-12-30T17:03:14.000Z",
+				"computed": false
+			}
+		},
+		"minDate": {
+			"type": {
+				"name": "union",
+				"value": [
+					{
+						"name": "string"
+					},
+					{
+						"name": "instanceOf",
+						"value": "Date"
+					}
+				]
+			},
+			"required": false,
+			"description": "Selectable minimum date. Prop can be a Date object or a UTC formatted string.",
+			"defaultValue": {
+				"value": "1949-12-31T23:03:05.000Z",
+				"computed": false
+			}
+		},
+		"mode": {
+			"type": {
+				"name": "enum",
+				"value": [
+					{
+						"value": "portrait",
+						"computed": false
+					},
+					{
+						"value": "landscape",
+						"computed": false
+					}
+				]
+			},
+			"required": false,
+			"description": "Calendar dialog type.",
+			"defaultValue": {
+				"value": "portrait",
+				"computed": false
+			}
+		},
+		"noDialog": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "If `true`, the dialog will render inline mode.",
+			"defaultValue": {
+				"value": false,
+				"computed": false
+			}
+		},
+		"okLabel": {
+			"type": {
+				"name": "string"
+			},
+			"required": false,
+			"description": "OK"
+		},
+		"onChange": {
+			"type": {
+				"name": "func"
+			},
+			"required": false,
+			"description": "@ignore"
+		},
+		"openBoaCalendar": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "@ignore"
+		},
+		"pageType": {
+			"type": {
+				"name": "enum",
+				"value": [
+					{
+						"value": "browse",
+						"computed": false
+					},
+					{
+						"value": "transactional",
+						"computed": false
+					}
+				]
+			},
+			"required": false,
+			"description": "@ignore",
+			"defaultValue": {
+				"value": "browse",
+				"computed": false
+			}
+		},
+		"timeOnChange": {
+			"type": {
+				"name": "func"
+			},
+			"required": false,
+			"description": "@ignore"
+		},
+		"value": {
+			"type": {
+				"name": "union",
+				"value": [
+					{
+						"name": "string"
+					},
+					{
+						"name": "instanceOf",
+						"value": "Date"
+					}
+				]
+			},
+			"required": false,
+			"description": "Selected date. Prop can be a Date object or a UTC formatted string."
+		}
+	},
+	"composes": [
+		"@kuveytturk/boa-base"
+	],
+	"composeProps": {
+		"packages/base/src/ComponentBase/index.js": {
+			"componentSize": {
+				"type": {
+					"name": "enum",
+					"value": [
+						{
+							"value": "ComponentSize.LARGE",
+							"computed": true
+						},
+						{
+							"value": "ComponentSize.MEDIUM",
+							"computed": true
+						},
+						{
+							"value": "ComponentSize.SMALL",
+							"computed": true
+						},
+						{
+							"value": "ComponentSize.XSMALL",
+							"computed": true
+						}
+					]
+				},
+				"required": false,
+				"description": "Defines size of the component. The ComponentSize constant is exported from enums.\n@ignore",
+				"defaultValue": {
+					"value": "ComponentSize.LARGE",
+					"computed": true
+				}
+			},
+			"context": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "Defines application requirements such as localization, theme, platform."
+			},
+			"disabled": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "If true, all component functionalities are disabled.",
+				"defaultValue": {
+					"value": false,
+					"computed": false
+				}
+			},
+			"id": {
+				"type": {
+					"name": "string"
+				},
+				"required": false,
+				"description": "All components must have an id prop."
+			},
+			"isVisible": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "@deprecated\n@ignore\nIn the ComponentComposer, we change the visibility of the component with this prop."
+			},
+			"newLine": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "As described in componentSize prop, if one of the components takes part in the new line\non a card we are using this prop.\n@ignore",
+				"defaultValue": {
+					"value": false,
+					"computed": false
+				}
+			},
+			"snapKey": {
+				"type": {
+					"name": "string"
+				},
+				"required": false,
+				"description": "The snapKey property is used to manage snapshots of the child components.\n@ignore"
+			},
+			"snapshot": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "In our SPA, we want to keep the state of each component when a page unmounts.\nAnd when the same page mounts again, the component mounts with the snapshot prop and\nit gets the previous state.\n@ignore"
+			},
+			"style": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "All components must have a style prop."
+			},
+			"valueConstraint": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "The valueConstraint is used for validations on components like limit, required, etc."
+			},
+			"visible": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "In the ComponentComposer, we change the visibility of the component with this prop.",
+				"defaultValue": {
+					"value": true,
+					"computed": false
+				}
+			}
+		}
+	}
+}

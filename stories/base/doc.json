@@ -1,0 +1,119 @@
+{
+	"description": "",
+	"displayName": "ComponentBase",
+	"methods": [],
+	"props": {
+		"componentSize": {
+			"type": {
+				"name": "enum",
+				"value": [
+					{
+						"value": "ComponentSize.LARGE",
+						"computed": true
+					},
+					{
+						"value": "ComponentSize.MEDIUM",
+						"computed": true
+					},
+					{
+						"value": "ComponentSize.SMALL",
+						"computed": true
+					},
+					{
+						"value": "ComponentSize['1']",
+						"computed": true
+					},
+					{
+						"value": "ComponentSize['2']",
+						"computed": true
+					},
+					{
+						"value": "ComponentSize['3']",
+						"computed": true
+					}
+				]
+			},
+			"required": false,
+			"description": "",
+			"defaultValue": {
+				"value": "ComponentSize.LARGE",
+				"computed": true
+			}
+		},
+		"context": {
+			"type": {
+				"name": "object"
+			},
+			"required": false,
+			"description": ""
+		},
+		"disabled": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "",
+			"defaultValue": {
+				"value": false,
+				"computed": false
+			}
+		},
+		"id": {
+			"type": {
+				"name": "string"
+			},
+			"required": false,
+			"description": ""
+		},
+		"newLine": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "",
+			"defaultValue": {
+				"value": false,
+				"computed": false
+			}
+		},
+		"snapKey": {
+			"type": {
+				"name": "string"
+			},
+			"required": false,
+			"description": ""
+		},
+		"snapshot": {
+			"type": {
+				"name": "object"
+			},
+			"required": false,
+			"description": ""
+		},
+		"style": {
+			"type": {
+				"name": "object"
+			},
+			"required": false,
+			"description": ""
+		},
+		"valueConstraint": {
+			"type": {
+				"name": "object"
+			},
+			"required": false,
+			"description": ""
+		},
+		"visible": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "",
+			"defaultValue": {
+				"value": true,
+				"computed": false
+			}
+		}
+	}
+}

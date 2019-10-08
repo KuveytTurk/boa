@@ -1,0 +1,219 @@
+{
+	"description": "This component renders the markdown documents. It supports all markdown features.",
+	"displayName": "DocViewer",
+	"methods": [
+		{
+			"name": "getTableOfContent",
+			"docblock": null,
+			"modifiers": [
+				"static"
+			],
+			"params": [
+				{
+					"name": "source",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "changeEditorType",
+			"docblock": null,
+			"modifiers": [],
+			"params": [
+				{
+					"name": "event",
+					"type": null
+				}
+			],
+			"returns": null
+		},
+		{
+			"name": "getStyle",
+			"docblock": null,
+			"modifiers": [],
+			"params": [],
+			"returns": null
+		},
+		{
+			"name": "getTableOfContent",
+			"docblock": null,
+			"modifiers": [],
+			"params": [],
+			"returns": null
+		}
+	],
+	"props": {
+		"content": {
+			"type": {
+				"name": "string"
+			},
+			"required": false,
+			"description": "Markdown content of documentation.",
+			"defaultValue": {
+				"value": "",
+				"computed": false
+			}
+		},
+		"editorType": {
+			"type": {
+				"name": "enum",
+				"value": [
+					{
+						"value": "androidStudio",
+						"computed": false
+					},
+					{
+						"value": "atomOneDark",
+						"computed": false
+					},
+					{
+						"value": "atomOneLight",
+						"computed": false
+					},
+					{
+						"value": "github",
+						"computed": false
+					},
+					{
+						"value": "monokaiSublime",
+						"computed": false
+					},
+					{
+						"value": "raiinbow",
+						"computed": false
+					},
+					{
+						"value": "vs",
+						"computed": false
+					},
+					{
+						"value": "xcode",
+						"computed": false
+					}
+				]
+			},
+			"required": false,
+			"description": "Editor type that will be colored.",
+			"defaultValue": {
+				"value": "atomOneDark",
+				"computed": false
+			}
+		}
+	},
+	"composeProps": {
+		"packages/base/src/ComponentBase/index.js": {
+			"componentSize": {
+				"type": {
+					"name": "enum",
+					"value": [
+						{
+							"value": "ComponentSize.LARGE",
+							"computed": true
+						},
+						{
+							"value": "ComponentSize.MEDIUM",
+							"computed": true
+						},
+						{
+							"value": "ComponentSize.SMALL",
+							"computed": true
+						},
+						{
+							"value": "ComponentSize.XSMALL",
+							"computed": true
+						}
+					]
+				},
+				"required": false,
+				"description": "Defines size of the component. The ComponentSize constant is exported from enums.\n@ignore",
+				"defaultValue": {
+					"value": "ComponentSize.LARGE",
+					"computed": true
+				}
+			},
+			"context": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "Defines application requirements such as localization, theme, platform."
+			},
+			"disabled": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "If true, all component functionalities are disabled.",
+				"defaultValue": {
+					"value": false,
+					"computed": false
+				}
+			},
+			"id": {
+				"type": {
+					"name": "string"
+				},
+				"required": false,
+				"description": "All components must have an id prop."
+			},
+			"isVisible": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "@deprecated\n@ignore\nIn the ComponentComposer, we change the visibility of the component with this prop."
+			},
+			"newLine": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "As described in componentSize prop, if one of the components takes part in the new line\non a card we are using this prop.\n@ignore",
+				"defaultValue": {
+					"value": false,
+					"computed": false
+				}
+			},
+			"snapKey": {
+				"type": {
+					"name": "string"
+				},
+				"required": false,
+				"description": "The snapKey property is used to manage snapshots of the child components.\n@ignore"
+			},
+			"snapshot": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "In our SPA, we want to keep the state of each component when a page unmounts.\nAnd when the same page mounts again, the component mounts with the snapshot prop and\nit gets the previous state.\n@ignore"
+			},
+			"style": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "All components must have a style prop."
+			},
+			"valueConstraint": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "The valueConstraint is used for validations on components like limit, required, etc."
+			},
+			"visible": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "In the ComponentComposer, we change the visibility of the component with this prop.",
+				"defaultValue": {
+					"value": true,
+					"computed": false
+				}
+			}
+		}
+	}
+}

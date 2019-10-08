@@ -1,0 +1,199 @@
+{
+	"description": "This component renders the messages with several types:\n'Tip, Info, Warning, Error'",
+	"displayName": "DocNotice",
+	"methods": [
+		{
+			"name": "getStyle",
+			"docblock": null,
+			"modifiers": [],
+			"params": [],
+			"returns": null
+		},
+		{
+			"name": "getIcon",
+			"docblock": null,
+			"modifiers": [],
+			"params": [],
+			"returns": null
+		}
+	],
+	"props": {
+		"content": {
+			"type": {
+				"name": "string"
+			},
+			"required": false,
+			"description": "The text to display.",
+			"defaultValue": {
+				"value": "",
+				"computed": false
+			}
+		},
+		"fitMode": {
+			"type": {
+				"name": "bool"
+			},
+			"required": false,
+			"description": "Determines the paddings in interior design. Default false, wide paddings like material.",
+			"defaultValue": {
+				"value": false,
+				"computed": false
+			}
+		},
+		"header": {
+			"type": {
+				"name": "string"
+			},
+			"required": false,
+			"description": "Header message of the notice.",
+			"defaultValue": {
+				"value": "",
+				"computed": false
+			}
+		},
+		"type": {
+			"type": {
+				"name": "enum",
+				"value": [
+					{
+						"value": "info",
+						"computed": false
+					},
+					{
+						"value": "tip",
+						"computed": false
+					},
+					{
+						"value": "warning",
+						"computed": false
+					},
+					{
+						"value": "error",
+						"computed": false
+					}
+				]
+			},
+			"required": false,
+			"description": "Determines type of the notice.",
+			"defaultValue": {
+				"value": "tip",
+				"computed": false
+			}
+		}
+	},
+	"composeProps": {
+		"packages/base/src/ComponentBase/index.js": {
+			"componentSize": {
+				"type": {
+					"name": "enum",
+					"value": [
+						{
+							"value": "ComponentSize.LARGE",
+							"computed": true
+						},
+						{
+							"value": "ComponentSize.MEDIUM",
+							"computed": true
+						},
+						{
+							"value": "ComponentSize.SMALL",
+							"computed": true
+						},
+						{
+							"value": "ComponentSize.XSMALL",
+							"computed": true
+						}
+					]
+				},
+				"required": false,
+				"description": "Defines size of the component. The ComponentSize constant is exported from enums.\n@ignore",
+				"defaultValue": {
+					"value": "ComponentSize.LARGE",
+					"computed": true
+				}
+			},
+			"context": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "Defines application requirements such as localization, theme, platform."
+			},
+			"disabled": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "If true, all component functionalities are disabled.",
+				"defaultValue": {
+					"value": false,
+					"computed": false
+				}
+			},
+			"id": {
+				"type": {
+					"name": "string"
+				},
+				"required": false,
+				"description": "All components must have an id prop."
+			},
+			"isVisible": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "@deprecated\n@ignore\nIn the ComponentComposer, we change the visibility of the component with this prop."
+			},
+			"newLine": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "As described in componentSize prop, if one of the components takes part in the new line\non a card we are using this prop.\n@ignore",
+				"defaultValue": {
+					"value": false,
+					"computed": false
+				}
+			},
+			"snapKey": {
+				"type": {
+					"name": "string"
+				},
+				"required": false,
+				"description": "The snapKey property is used to manage snapshots of the child components.\n@ignore"
+			},
+			"snapshot": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "In our SPA, we want to keep the state of each component when a page unmounts.\nAnd when the same page mounts again, the component mounts with the snapshot prop and\nit gets the previous state.\n@ignore"
+			},
+			"style": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "All components must have a style prop."
+			},
+			"valueConstraint": {
+				"type": {
+					"name": "object"
+				},
+				"required": false,
+				"description": "The valueConstraint is used for validations on components like limit, required, etc."
+			},
+			"visible": {
+				"type": {
+					"name": "bool"
+				},
+				"required": false,
+				"description": "In the ComponentComposer, we change the visibility of the component with this prop.",
+				"defaultValue": {
+					"value": true,
+					"computed": false
+				}
+			}
+		}
+	}
+}

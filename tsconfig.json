@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "lib": [
+      "es6",
+      "dom"
+    ],
+    "jsx": "react",
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noEmit": true,
+    "experimentalDecorators": true,
+    "baseUrl": "./",
+    "paths": {
+      "@kuveytturk/boa-base": [
+        "packages/base/src"
+      ],
+      "@kuveytturk/boa-components": [
+        "packages/components/src"
+      ],
+      "@kuveytturk/boa-components/*": [
+        "packages/components/src/*"
+      ],
+      "@kuveytturk/boa-utils": [
+        "packages/utils/src"
+      ],
+      "@kuveytturk/boa-test/utils": [
+        "test/utils"
+      ]
+    }
+  },
+}

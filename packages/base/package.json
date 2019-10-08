@@ -1,0 +1,42 @@
+{
+  "name": "@kuveytturk/boa-base",
+  "private": true,
+  "author": "Kuveyt Turk BOA One Team",
+  "version": "0.1.8",
+  "description": "Composer, BaseComponent, Theme, ErrorBoundary for BOA Components",
+  "keywords": [
+    "react",
+    "react-component",
+    "material design"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kuveytturk/boa.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kuveytturk/boa/issues"
+  },
+  "scripts": {
+    "prebuild": "rimraf build",
+    "build:es2015": "cross-env NODE_ENV=production babel --config-file ../../babel.config.js src --out-dir ./build --ignore \"src/**/*.test.js\" ",
+    "build:copy-files": "babel-node --config-file ../../babel.config.js ./scripts/copy-files.js",
+    "build": "yarn build:es2015 && yarn build:copy-files"
+  },
+  "dependencies": {
+    "@kuveytturk/boa-utils": "^0.1.1",
+    "@material-ui/core": "3.9.2",
+    "lodash": "^4.17.13",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "shallowequal": "^0.2.2"
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  }
+}
