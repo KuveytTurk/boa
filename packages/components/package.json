@@ -32,7 +32,7 @@
     "highlight.js": "^9.11.0",
     "iban": "^0.0.10",
     "infinite-tree": "^1.16.2",
-    "jquery": "^3.4.0",
+    "jquery": "^3.5.0",
     "keycode": "^2.2.0",
     "lodash": "^4.17.13",
     "perfect-scrollbar": "^1.4.0",
