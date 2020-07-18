@@ -26,7 +26,7 @@
   "dependencies": {
     "@kuveytturk/boa-utils": "^0.1.1",
     "@material-ui/core": "3.9.2",
-    "lodash": "^4.17.13",
+    "lodash": "^4.17.19",
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
