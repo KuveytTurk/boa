@@ -107,7 +107,7 @@
     "object-assign": "^4.1.0",
     "postcss-loader": "^1.1.1",
     "prettier": "^1.15.2",
-    "puppeteer": "^1.10.0",
+    "puppeteer": "^1.13.0",
     "react-docgen": "^2.21.0",
     "react-dts-generator": "^0.1.0",
     "react-element-to-jsx-string": "^14.0.1",
