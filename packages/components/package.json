@@ -29,7 +29,7 @@
     "@material-ui/core": "3.9.2",
     "@material-ui/icons": "3.0.2",
     "classnames": "^2.2.6",
-    "highlight.js": "^9.11.0",
+    "highlight.js": "^10.1.2",
     "iban": "^0.0.10",
     "infinite-tree": "^1.16.2",
     "jquery": "^3.4.0",
