@@ -34,7 +34,7 @@
     "infinite-tree": "^1.16.2",
     "jquery": "^3.4.0",
     "keycode": "^2.2.0",
-    "lodash": "^4.17.13",
+    "lodash": "^4.17.21",
     "perfect-scrollbar": "^1.4.0",
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
