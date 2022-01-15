@@ -101,7 +101,7 @@
     "lint-staged": "7.2.0",
     "loader-utils": "^1.1.0",
     "lodash-compat": "^3.10.2",
-    "marked": "^0.3.19",
+    "marked": "^4.0.10",
     "mocha": "^5.2.0",
     "nyc": "^13.1.0",
     "object-assign": "^4.1.0",
