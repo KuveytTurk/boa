@@ -26,7 +26,7 @@
   "dependencies": {
     "iban": "^0.0.10",
     "jquery": "^3.4.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "numeral": "^2.0.4",
     "phone-formatter": "^0.0.2"
   },
