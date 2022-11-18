@@ -99,7 +99,7 @@
     "karma-webpack": "^3.0.0",
     "keycode": "^2.2.0",
     "lint-staged": "7.2.0",
-    "loader-utils": "^1.1.0",
+    "loader-utils": "^1.4.2",
     "lodash-compat": "^3.10.2",
     "marked": "^0.3.19",
     "mocha": "^5.2.0",
